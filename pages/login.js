@@ -3,7 +3,7 @@ var loginActions = {
     with:  function(email, pass){ // nao suporte o is6 (=>)
         return this
         .navigate()
-        .waitForElementVisible('@form', 10000)
+        .waitForElementVisible('@form', 50000)
         .setValue('@emailInput', email)
         .setValue('@passInput', pass)
         .click('@loginButton')
@@ -11,13 +11,13 @@ var loginActions = {
 
     expectAlertDanger: function(texto){
         return this
-        .waitForElementVisible('@alertDanger', 10000)
+        .waitForElementVisible('@alertDanger', 50000)
         .assert.containsText('@alertDanger', texto)
     },
 
     expectAlertInfo: function(texto){
         return this
-        .waitForElementVisible('@alertInfo', 10000)
+        .waitForElementVisible('@alertInfo', 50000)
         .assert.containsText('@alertInfo', texto)
     }
 }
