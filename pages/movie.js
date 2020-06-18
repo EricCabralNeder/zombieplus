@@ -3,14 +3,14 @@ var createActions = {
     createForm: function () {
         return this
             .click('@addButton')
-            .waitForElementVisible('@movieForm', 3000) // 3 segundos
+            .waitForElementVisible('@movieForm', 10000) // 3 segundos
     },
 
     selectStatus: function (status) {
         return this
             .click('@statusSelect')
             .useXpath() // para se usar o Xpath
-            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 2000) //Xpath, usando interpolação, com  apostrofo(`) em vez de (')
+            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 10000) //Xpath, usando interpolação, com  apostrofo(`) em vez de (')
             .click(`//li//span[contains(text(),"${status}")]`)
             .useCss() // voltando para usar css
     },
