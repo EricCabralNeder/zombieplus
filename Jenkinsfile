@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Tests'){
             steps{
-                sh "npm run test:ci2"
+                sh "npm run test:ci"
                 junit testResults: "tests_tests_output/**/*.xml"
             }
             
