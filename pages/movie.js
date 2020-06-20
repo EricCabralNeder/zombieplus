@@ -3,14 +3,14 @@ var createActions = {
     createForm: function () {
         return this
             .click('@addButton')
-            .waitForElementVisible('@movieForm', 50000) // 3 segundos
+            .waitForElementVisible('@movieForm', 100000) // 3 segundos
     },
 
     selectStatus: function (status) {
         return this
             .click('@statusSelect')
             .useXpath() // para se usar o Xpath
-            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 50000) //Xpath, usando interpolação, com  apostrofo(`) em vez de (')
+            .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 100000) //Xpath, usando interpolação, com  apostrofo(`) em vez de (')
             .click(`//li//span[contains(text(),"${status}")]`)
             .useCss() // voltando para usar css
     },
@@ -30,7 +30,7 @@ var createActions = {
         let fullPath = require('path').resolve(__dirname, '../images/' + fileName)
         return this
         .setValue('@uploadInput', fullPath)
-        .pause(1000)
+        .pause(10000)
         .assert.attributeContains('.picture-src', 'src', 'blob')
     }
 }

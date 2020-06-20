@@ -19,10 +19,10 @@ module.exports = {
     start_process: true,
   },
 
-  test_workers: {
-    anabled: true, // testes em paralelo, vai depender da maquina virtual, processador.
-    workers: 2 // quantidade de navegadores simultaneos
-  },
+  //test_workers: {
+    //anabled: true, // testes em paralelo, vai depender da maquina virtual, processador.
+    //workers: 2 // quantidade de navegadores simultaneos
+  //},
 
   test_settings: {
     default: {
