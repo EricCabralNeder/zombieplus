@@ -11,7 +11,8 @@
     "stage:smoke": ".\\node_modules\\.bin\\nightwatch.cmd --tag smoke --env=stage",
     "test:notage": ".\\node_modules\\.bin\\nightwatch.cmd --akiptags smoke, 404",
     "test": ".\\node_modules\\.bin\\nightwatch.cmd",
-    "test:ci": "./node_modules/.bin/nightwatch --tag smoke --env=headless"
+    "test:ci": "./node_modules/.bin/nightwatch --tag smoke --env=headless",
+    "test:ci2": "./node_modules/.bin/nightwatch"
   },
   "keywords": [
     "qaninja",
